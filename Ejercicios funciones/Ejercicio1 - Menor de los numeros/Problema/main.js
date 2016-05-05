@@ -13,4 +13,3 @@ function menor(a,b,c){
 }
 alert("El menor entre los números "+a+" , "+b+" y "+c+" es "+menor(a,b,c))
 
-

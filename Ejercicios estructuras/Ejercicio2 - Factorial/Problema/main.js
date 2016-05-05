@@ -5,7 +5,5 @@ for(var i=n;i>0;i--){
 	factorial=factorial*i
 	cadena+=i+"x"
 }
-alert("El factorial de "+n+"! es "+cadena+" = "+factorial)//sale 3x2x1x =6
-
-
-
+cadena=cadena.substring(0,cadena.length-1)//en vez de salir 3x2x1x =6 <> 3x2x1 =6
+alert("El factorial de "+n+"! es "+cadena+" = "+factorial)
