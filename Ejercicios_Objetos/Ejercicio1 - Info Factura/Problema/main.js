@@ -1,40 +1,75 @@
-function factura() {
-  var factura = {
-    "empresa": ["Nombre de la empresa", "Dirección", "Teléfono", "NIF"],
-    "cliente": ["Nombre de el cliente", "Dirección", "Teléfono", "NIF"],
-    "producto": ["Nombre de producto", "precio", "cantidad"],
-    "facturas": ["Tipo de iva", "Forma de pago"]
-  };
-  var empresa = [];
-  var cliente = [];
-// ========================================================
+var factura={
+				empresa:{
+							nombre:"Tai Loy",
+						 	direccion:"Miraflores",
+						 	telefono:3333333,
+						 	NIF:"B55555555"
+						 },
+
+				cliente:{	
+							nombre:"Carla Mendoza",
+							direccion:"Miraflores",
+							telefono:3456789,
+							DNI:40348722,
+						},
+
+				articulo:[	
+							{
+								descripcion:"Faber-Castell  Tinta seca azul punta mediana",
+								precio:3,
+								cantidad:10
+							}
+						],
+
+                montoTotal:null,
+
+				tipoIva:13,
+
+				formaPago:14,
+
+				importeTotal:function(){ this.montoTotal=(this.articulo[0].precio)*(this.articulo[0].cantidad)*this.tipoIva}
+
+}
+
+factura.importeTotal()
+alert("El monto total de la factura :"+factura.montoTotal+" soles")
 
 
-// var allFactura=[
-//     empresa={
-//       nombre:null,
-//       direccion:null,
-//       telefono:null,
-//       NIF:null  
-//     },
 
-//     cliente={
-//       nombre:null,
-//       direccion:null,
-//       telefono:null,
-//       DNI:null  
-//     },
-//     articulo={
-//       descripcion:null,
-//       precio:null,
-//       cantidad:null
-//     },
-//     informacion={
-//       importeTotal:null,
-//       tipoIva:null,
-//       formaPago:null
-//     }
-// ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for(i in factura){
+// 	for(j in factura[i]){
+// 		if(typeof factura[i][j]=="string"){
+// 			factura[i][j]=prompt("Ingrese el dato "+i+" "+j)
+// 		}else if(typeof factura[i][j]=="number"){
+// 			factura[i][j]=parseFloat(prompt("Ingrese el dato"+i+" "+j))
+// 		}else if(typeof factura[i][j]=="function"){
+
+// 		}else if(){
+
+// 		}
+// 	}
+
+// }
+
+
+
+
+
+
+
 
 // var numberFacturas=parseInt(prompt("Ingrese la cantidad de facturas a registrar"))
 // var longitud=allFactura.length
@@ -57,14 +92,6 @@ function factura() {
 // }
 
 
-
-
-
-
-
-
-
-
 // for(i=0;i<numberFacturas;i++){
 //   var factura={}
 //   alert("Ingrese los datos de la empresa")
@@ -79,7 +106,7 @@ function factura() {
 //     factura.cliente[dni]=prompt("Ingrese el nif de la empresa")
 // }
 
-// \td
+// \td para espaciar
 
 
 

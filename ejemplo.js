@@ -39,52 +39,45 @@ f.cliente.nombre = nombreCliente;
 var importeTotal;
 f.importeTotal = importeTotal;
 
+****************************************
+// Está definición no está bien definido en el problema factura
+// los artículos son objetos
+// 
+// var allFactura=[
+//     empresa={
+//       nombre:null,
+//       direccion:null,
+//       telefono:null,
+//       NIF:null  
+//     },
+
+//     cliente={
+//       nombre:null,
+//       direccion:null,
+//       telefono:null,
+//       DNI:null  
+//     },
+//     articulo={
+//       descripcion:null,
+//       precio:null,
+//       cantidad:null
+//     },
+//     informacion={
+//       importeTotal:null,
+//       tipoIva:null,
+//       formaPago:null
+//     }
+// ]
+
+
+*************************************************
 
 
 
 
 
 
-
-//++++++++++++++++++++++++++++++++++++++++++++++
-// var factura = {
-//   empresa: {
-//     nombre:    "Nombre de la empresa",
-//     direccion: "Dirección de la empresa",
-//     telefono:  "900900900",
-//     nif:       ""
-//   },
-//   cliente: {
-//     nombre:    "Nombre del cliente",
-//     direccion: "Dirección del cliente",
-//     telefono:  "600600600",
-//     nif:       "XXXXXXXXX"
-//   },
-//   elementos: [
-//     { descripcion: "Producto 1", cantidad: 0, precio: 0 },
-//     { descripcion: "Producto 2", cantidad: 0, precio: 0 },
-//     { descripcion: "Producto 3", cantidad: 0, precio: 0 }
-//   ],
-//   informacion: {
-//     baseImponible:  0,
-//     iva:            16,
-//     total:          0,
-//     formaPago:      "contado"
-//   }
-// };
- 
-// // Métodos de cálculo del total y de visualización del total
-// factura.calculaTotal = function() {
-//   for(var i=0; i<this.elementos.length; i++) {
-//     this.informacion.baseImponible += this.elementos[i].cantidad * this.elementos[i].precio;
-//   }
-//   var importeIva = (1 + (this.informacion.iva/100));
-//   this.informacion.total = (this.informacion.baseImponible * importeIva).toFixed(2);
-// }
- 
-// factura.muestraTotal = function() {
-//   this.calculaTotal();
-//   alert("TOTAL = " + this.informacion.total + " euros");
-// }
- 
-// factura.muestraTotal();
+// *********************************
+// var a=number() es solo para inicializar pues no es para convertir una cadena en número 
+// ahora el parseInt es para convertir una cadena a un número te permite multiplicar y dividir 
+// pero tendrá conflictos si no le pones parseInt a la cadena pues al momento de sumar de va a concatenar
